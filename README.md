@@ -14,4 +14,5 @@
 14) git log    (used to see all the commit in particular branch)
 15) git show <-commit id->  (used to see all the changes happens in repo)
 16) git branch -m <-branch name->    (used to rename the current branch)
-17) 
+17) git reset --soft HEAD~1       (used to change the message of the recent commit)
+18) git reset --hard HEAD~1       (used to discard all the changes made in the file)
