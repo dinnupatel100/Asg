@@ -1,0 +1,12 @@
+Q1. What is cherry-pick? Explain the use case of it also write steps to do it.
+->
+
+Cherry-Pick is a way of picking particular commit from another branch and applying it to our own branch.
+
+Use Case : Suppose User1 working on feature1 branch with three commit A1, A2, A3 and User2 working on feature2 branch with three 	commits B1, B2, B3. Now User1 wants to apply the changes happen at B1 commit of User2 to his own branch. In this scenario, Cherry-pick will be used.
+
+
+Steps :
+1) git log nav --oneline (with the help of git log find the commit which you want pick and copy the hash code of that particular commit).
+2) git cherry-pick <hash-code>  (use this command to pick that commit and apply to your branch).
+

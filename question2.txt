@@ -1,0 +1,48 @@
+Q2. How to set multiple remote repositories for the same project? Explain the use case. you should have a working demo of it.
+=>
+
+Following are the steps to set multiple remote repositories for the same project.
+
+1) To add local repo to remote repo use command "git remote add origin <link_of_repo>".
+2) To check whether the remote repo is added, use command "git remote -v".
+3) Push the local repo to remote using command "git push origin main"
+4) To add another remote repo use command "git remote add origin <link_of_repo2>".
+5) To check whether the remote repo is added, use command "git remote -v".
+6) Push the local repo to remote using command "git push origin1 main"
+
+
+Working Demo
+
+1) Push the local repo to remote (repo1)
+
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ ls
+A1.txt  A2.txt  A3.txt  B2.txt
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ git remote add origin https://github.com/dinnupatel100/repo1.git
+fatal: remote origin already exists.
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ git remote -v
+origin	https://github.com/dinnupatel100/repo1.git (fetch)
+origin	https://github.com/dinnupatel100/repo1.git (push)
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+
+
+2) Push the local repo to remote (repo2)
+
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ git remote add origin1 https://github.com/dinnupatel100/repo2.git
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ git remote -v
+origin	https://github.com/dinnupatel100/repo1.git (fetch)
+origin	https://github.com/dinnupatel100/repo1.git (push)
+origin1	https://github.com/dinnupatel100/repo2.git (fetch)
+origin1	https://github.com/dinnupatel100/repo2.git (push)
+jspnlp@jspnlp-Inspiron-3501:~/dinesh/GIT/Practice$ git push origin1 main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+
+
+Use Case : 
+
+1) If different teams are working on different aspects of a project, each team can have its own remote repository. This allows teams to work independently.
+2) Maintaining a backup remote repository. If the primary remote server goes down or faces issues, you can switch to the backup repository.
+
+
