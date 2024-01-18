@@ -1,0 +1,14 @@
+Q5. Difference between --force push and --force-with-lease, You have to show the use of both, also you have to show in what scenario --force-with-lease is used?
+=>
+
+1) git push --force-with-lease
+   - This command will not let you push if there is extra commit on remote branch
+   - This command is used when you changed the commit on local repository and you want to push to remote repository.
+  
+2) git push --force
+    - This command will still push if there is extra commit on remote branch
+    - This command is used when you have an extra commit on remote repository or you delete some commits on local repository and want to   push the commit to remote.
+    
+Scenario for --force-with-lease :
+
+Suppose user has 2 commits A1, A2 on remote repository but user wants to change A2 commit. User will clone it from remote repo and change the commit. With "git push origin main" command user will not able to push the commit to remote because the remote commit and local commit is different. User need to make use of " git push --force-with-lease"

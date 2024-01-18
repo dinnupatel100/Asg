@@ -1,0 +1,8 @@
+Q5. How to un stage changes from the staged area. write command for it.
+=>
+
+"git reset <filename>" command is used to unstage changes from the staged area. 
+
+Steps :
+1) Add the modified file to the staged area with "git add <filename>" command.
+2) Use "git reset <filename>" command to unstage the changes.
