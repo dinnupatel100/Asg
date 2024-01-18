@@ -4,5 +4,5 @@ Q3. How to combine two commits into one commit? For Example, you have 4 differen
 "git rebase -i HEAD~2" command is used to combine two commit into one commit and the process is known as squash.
 
 Suppose we have 4 commits C1, C2, C3, and  C4 and you have to combine C2 and C3 into one single commit.
- Step 1 : use command "git rebase -i HEAD~4" 
+ Step 1 : use command "git rebase -i HEAD~3" 
  Step 2 : replace "pick" with "s" in front of C3 and save it to combine C2 and C3 commit.
